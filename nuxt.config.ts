@@ -23,5 +23,8 @@ export default defineNuxtConfig({
   },
   experimental: {
     componentIslands: true
-  }
+  },
+  future: {
+    compatibilityVersion: 4,
+  },
 })

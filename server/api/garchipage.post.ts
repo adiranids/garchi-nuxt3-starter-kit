@@ -1,8 +1,12 @@
-import Garchi from "../utils/garchi"
 
+import {garchi} from "~/server/utils/garchi"
 export default defineEventHandler(async( event )=> {
-    const garchiHelper = new Garchi()
+
     const {slug} = await readBody(event)
-    const page = await garchiHelper.getGarchiPage("your_space_uid", "draft", slug)
+    const page = await garchi.headless.getPage({
+        slug: slug as string,
+        space_uid: "your space uid",
+        mode: "draft"
+    })
     return page
 })

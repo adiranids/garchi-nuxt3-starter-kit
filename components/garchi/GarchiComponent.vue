@@ -8,7 +8,9 @@
 </template>
 
 <script setup lang="ts">
-import type {GarchiSection} from "@/assets/types/garchi"
+import type { GarchiSection } from '@garchicms/garchi-node-sdk';
+
+
 const props = defineProps<{
     section: GarchiSection
 }>()
